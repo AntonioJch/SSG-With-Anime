@@ -8,7 +8,7 @@
     "start": "npm run serve",
     "dev": "concurrently \"webpack -w\" \"micro-dev\"",
     "export": "node export.js",
-    "build": "webpack -p && node export",
+    "build": "webpack --mode=production && node export",
     "serve": "serve ."
   },
   "prettier": {
@@ -38,11 +38,12 @@
     "pretty-quick": "^2.0.1",
     "serve": "^11.3.0",
     "style-loader": "^1.1.4",
-    "webpack": "^4.42.0",
+    "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^3.6.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0"
+    "isomorphic-unfetch": "^3.0.0",
+    "webpack-dev-server": "^4.11.0"
   }
 }

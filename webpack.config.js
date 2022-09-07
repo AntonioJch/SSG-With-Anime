@@ -27,7 +27,7 @@ const config = {
     filename: '[name].bundle.js',
   },
   devServer: {
-    contentBase: '.',
+    static: './',
   },
   plugins,
 }
