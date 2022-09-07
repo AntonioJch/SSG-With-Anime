@@ -1,4 +1,4 @@
-# Proyecto Curso de Optimización Web Platzi
+# Proyecto Curso de Optimización Web 
 
 Curso de optimización web dictado por [@jonalvarezz](https://twitter.com/jonalvarezz) para [Platzi](https://platzi.com)
 
