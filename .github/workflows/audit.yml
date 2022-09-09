@@ -23,7 +23,7 @@ jobs:
       - name: Audit with lighthouse CI
         uses: treosh/lighthouse-ci-action@v9
         with:
-        run: 5
+        runs: 5
         uploadArtifacts:
           true
           # no urls needed, since it uses local folder to scan .html files
