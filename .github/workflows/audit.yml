@@ -23,8 +23,8 @@ jobs:
       - name: Audit with lighthouse CI
         uses: treosh/lighthouse-ci-action@v9
         with:
-        runs: 5
+        configPath: '../../.github/workflows/setup/lighthouserc.json'
+        runs: 3
         uploadArtifacts:
           true
           # no urls needed, since it uses local folder to scan .html files
-        configPath: '../../.github/workflows/setup/lighthouserc.json'
