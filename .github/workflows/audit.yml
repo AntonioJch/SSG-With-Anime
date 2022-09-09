@@ -1,11 +1,25 @@
 name: Lighthouse
-on: push
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 jobs:
-  static-dist-dir:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Lighthouse against a static dist dir
+
+      - name: Use Node.js 17.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17x
+
+      - name: Install and build
+        run: npm install
+          npm run build
+
+      - name: Audit with lighthouse CI
         uses: treosh/lighthouse-ci-action@v9
         with:
         runs: 5
