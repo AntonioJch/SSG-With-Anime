@@ -16,14 +16,15 @@ jobs:
           node-version: 17x
 
       - name: Install and build
-        run: npm install
+        run: |
+          npm install
           npm run build
 
       - name: Audit with lighthouse CI
         uses: treosh/lighthouse-ci-action@v9
         with:
-        run: 5
+        configPath: ./setup/lighthouserc.json
+        runs: 3
         uploadArtifacts:
           true
           # no urls needed, since it uses local folder to scan .html files
-        configPath: '../../.github/workflows/setup/lighthouserc.json'
