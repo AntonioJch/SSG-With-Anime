@@ -16,7 +16,8 @@ jobs:
           node-version: 17x
 
       - name: Install and build
-        run: npm install
+        run: |
+          npm install
           npm run build
 
       - name: Audit with lighthouse CI
