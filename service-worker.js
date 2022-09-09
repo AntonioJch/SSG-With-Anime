@@ -34,7 +34,7 @@ async function cacheOrEvent(event) {
   // en el cache para proximas respuestas.
   const clonedAnswer = answer.clone()
   caches.open(CACHE_NAME).then(cache => {
-    cache.put(event.request, clonedResponse) // estos parametros representa clave y valor
+    cache.put(event.request, clonedAnswer) // estos parametros representa clave y valor
   })
   return answer
 }
