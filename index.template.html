@@ -88,6 +88,29 @@
 
     <!-- Scripts -->
     <script async src="dist/main.bundle.js"></script>
+    <script defer>
+      const registerServiceWorker = async () => {
+        if ('serviceWorker' in navigator) {
+          try {
+            const registration = await navigator.serviceWorker.register(
+              './service-worker.js'
+            )
+
+            if (registration.installing) {
+              console.log('Service Worker installing')
+            } else if (registration.waiting) {
+              console.log('Service Worker waiting')
+            } else if (registration.active) {
+              console.log('Service Worker active')
+            }
+          } catch (error) {
+            console.error(`Registration Falied with ${error}`)
+          }
+        }
+      }
+
+      registerServiceWorker()
+    </script>
     <!-- Fonts -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
